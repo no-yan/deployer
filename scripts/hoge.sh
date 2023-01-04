@@ -1,0 +1,1 @@
+echo "🖥️ Shell script is running on github actions!"
