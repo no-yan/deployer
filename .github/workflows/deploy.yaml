@@ -20,11 +20,13 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
   Custom-Deploy-1:
-     runs-on: ubuntu-latest
-     steps:
-       - run: echo "🚀"
-       - uses: actions/checkout@v3
-       - run:
-          chmod +x ./scripts/hoge.sh
+    runs-on: ubuntu-latest
+    env:
+      val: hoge
+    steps:
+      - run: echo "🚀 $val"
+      - uses: actions/checkout@v3
+      - run: chmod +x ./scripts/${{ env.val }}.sh
           ./scripts/hoge.sh
-         shell: bash
+
+        shell: bash
