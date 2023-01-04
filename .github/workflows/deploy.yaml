@@ -23,4 +23,5 @@ jobs:
      runs-on: ubuntu-latest
      steps:
        - run: echo "🚀"
+       - uses: actions/checkout@v3
        - run: run scripts.sh
