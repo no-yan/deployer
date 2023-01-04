@@ -24,4 +24,4 @@ jobs:
      steps:
        - run: echo "🚀"
        - uses: actions/checkout@v3
-       - run: run scripts.sh
+       - run: run scripts/hoge.sh
