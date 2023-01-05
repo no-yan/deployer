@@ -24,6 +24,6 @@ jobs:
     needs:
       Custom-Deploy-1
     env:
-      val: needs.Custom-Deploy-1.outputs.msg
+      val: ${{ needs.Custom-Deploy-1.outputs.msg }}
     steps:
-      - run: echo ${{ env.msg }}
+      - run: echo "🚅 ${{ env.val }}"
