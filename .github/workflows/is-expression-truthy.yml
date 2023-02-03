@@ -1,0 +1,12 @@
+name: learn-github-actions
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "test=world" >> $GITHUB_OUTPUT
+        id: step1
+      - name: is truthy?
+        if: ${{steps.step1.outputs.test}}
+        run: echo "${{steps.step1.outputs.test}} is truthy"
